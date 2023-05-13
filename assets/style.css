@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
+
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #d3cfc9;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 589.22px;
+
+  gap: 10px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 12px 18px;
+
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-blue {
+    color: #F6F5F4;
+    background: #0259BE;
+    box-shadow: 0px 8px 0px #0D3059;
+}
+
+.btn-light {
+  color: #44332C;
+  background: #F6F5F4;
+  box-shadow: 0px 8px 0px #9C8D87;
+}
+
+/* Navbar section */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0 0 4px 4px;
+
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+  color: #f6f5f4;
+  background-color: #db4510;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navLogo {
+  display: inline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navItems > a {
+  font-size: 12px;
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.navItems {
+  display: flex;
+  gap: 8px;
+}
+
+/* Hero section */
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 8px;
+
+  text-align: center;
+
+  color: #44332c;
+}
+
+#heroHeader > h2,
+#heroHeader > h3 {
+  margin: 0;
+}
+
+#heroHeader > h2 {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#heroHeader > h3 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#hero > img {
+  width: 244px;
+  transform: rotate(-6deg);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* About section */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 8px;
+    padding: 14px 37px 22px 37px;
+
+    color: #F6F5F4;
+    background-color: #5F483F;
+
+    border-radius: 8px 8px 0px 0px;
+}
+
+#about article {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#about h4 {
+    text-align: center;
+
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-weight: bold;
+    margin: 0px;
+}
+
+#about p {
+    font-size: 12px;
+    margin: 0px;
+}
+
+#about img {
+    align-self: center;
+    width: 188px;
+    border: 2px solid #D3CFC9;
+    border-radius: 16px;
+}
+
+#about button {
+  align-self: center;
+}
