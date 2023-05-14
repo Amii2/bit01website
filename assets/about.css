@@ -1,0 +1,73 @@
+main {
+  padding-top: 14px;
+  align-items: center;
+  gap: 10px;
+}
+
+#ramoLogo {
+  height: 108px;
+  width: auto;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+h2,
+p {
+  width: 278px;
+  text-align: center;
+
+  margin: 0px;
+}
+
+h2 {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e90729;
+}
+
+p {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  color: #44332c;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+
+  margin: 0px;
+  margin-top: 8px;
+  padding: 0px;
+}
+
+li {
+  width: 102px;
+  text-align: center;
+}
+
+img {
+  width: 42px;
+}
+
+figure {
+  margin: 0px;
+}
+
+figcaption {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+ul > *:last-child {
+  margin-left: 18px;
+}
+
+main > p {
+  margin-top: 8px;
+}
