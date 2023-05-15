@@ -263,6 +263,7 @@ a.btn-blue {
 
 @media screen and (min-width: 1280px) {
   body {
+    overflow-y: auto;
     --scale-factor: 1.6;
   }
 
@@ -297,7 +298,7 @@ a.btn-blue {
 
   #about {
     --content-width: 600px;
-    padding: 2vh calc(calc(100% - var(--content-width)) / 2) 100vh
+    padding: 2vh calc(calc(100% - var(--content-width)) / 2) 4vh
       calc(calc(100% - var(--content-width)) / 2) !important;
   }
 }

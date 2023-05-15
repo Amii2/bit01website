@@ -1,4 +1,5 @@
 main {
+  height: auto;
   padding-top: 14px;
   align-items: center;
   gap: 10px;
@@ -12,6 +13,7 @@ main {
 article {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8px;
 }
 
@@ -42,11 +44,12 @@ ul {
 
   margin: 0px;
   margin-top: 8px;
+  margin-right: 18px;
   padding: 0px;
 }
 
 li {
-  width: 102px;
+  width: 24vw;
   text-align: center;
 }
 
@@ -70,4 +73,88 @@ ul > *:last-child {
 
 main > p {
   margin-top: 8px;
+}
+
+@media screen and (min-width: 744px) and (orientation: portrait) {
+  main {
+    gap: 32px;
+  }
+
+  article {
+    gap: 22px;
+  }
+
+  h2 {
+    width: 420px;
+  }
+
+  p {
+    width: 480px;
+  }
+
+  iframe {
+    width: 500px;
+    height: 300px;
+  }
+
+  #ramoLogo {
+    margin-top: 18px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    --scale-factor: 1.6;
+  }
+
+  h2 {
+    font-size: calc(20px * var(--scale-factor)) !important;
+  }
+
+  p {
+    font-size: calc(14px * var(--scale-factor)) !important;
+    width: 480px !important;
+  }
+
+  figcaption {
+    font-size: calc(14px * var(--scale-factor)) !important;
+  }
+
+  li {
+    width: 16vw;
+    margin-right: 0px;
+  }
+
+  ul {
+    max-width: 520px;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  iframe {
+    width: 430px;
+    height: 260px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    gap: 18px;
+  }
+
+  #ramoLogo {
+    width: 260px;
+    height: auto;
+  }
+
+  article {
+    gap: 20px;
+  }
+
+  iframe {
+    margin-top: 12px;
+    width: 470px;
+    height: 260px;
+  }
 }
