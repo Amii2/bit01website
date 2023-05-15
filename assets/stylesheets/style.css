@@ -55,6 +55,7 @@ a.btn-blue {
 
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   border-radius: 0 0 4px 4px;
@@ -85,6 +86,45 @@ a.btn-blue {
   gap: min(calc(4vw), 30px);
   /*width: 54%;
   max-width: 270px;*/
+}
+
+label span {
+  user-select: none;
+}
+
+@media screen and (orientation: portrait) {
+  .navbar {
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .navItems {
+    padding-right: 16px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #menu:not(:checked) ~ .navItems {
+    display: none;
+  }
+
+  #menu:checked ~ .navItems {
+    display: flex;
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #menu,
+  label {
+    display: none;
+  }
 }
 
 /* Hero section */
