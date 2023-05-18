@@ -3,12 +3,12 @@
 }
 
 body {
-  overflow-y: hidden;
   overflow-x: hidden;
+  height: 100vh;
   margin: 0;
 
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background-color: #d3cfc9;
+  background-color: #5f483f;
   color: #44332c;
 }
 
@@ -16,6 +16,7 @@ main {
   display: flex;
   flex-direction: column;
   height: 589.22px;
+  background-color: #d3cfc9;
 
   gap: 10px;
 }
@@ -100,7 +101,6 @@ label span {
   }
 
   .navItems {
-    padding-right: 16px;
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 8px;
@@ -178,7 +178,6 @@ label span {
   background-color: #5f483f;
 
   border-radius: 8px 8px 0px 0px;
-  padding-bottom: 100vw;
 }
 
 #about article {
@@ -251,7 +250,7 @@ label span {
 
     #about {
       --content-width: 580px;
-      padding: 2vh calc(calc(100% - var(--content-width)) / 2) 100vh
+      padding: 2vh calc(calc(100% - var(--content-width)) / 2) 2vh
         calc(calc(100% - var(--content-width)) / 2) !important;
     }
 
@@ -338,7 +337,7 @@ label span {
 
   #about {
     --content-width: 600px;
-    padding: 2vh calc(calc(100% - var(--content-width)) / 2) 4vh
+    padding: 2vh calc(calc(100% - var(--content-width)) / 2) 2vh
       calc(calc(100% - var(--content-width)) / 2) !important;
   }
 }

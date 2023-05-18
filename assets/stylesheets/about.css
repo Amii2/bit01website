@@ -1,8 +1,13 @@
+body {
+  background-color: #d3cfc9;
+}
+
 main {
   height: auto;
   padding-top: 14px;
   align-items: center;
   gap: 10px;
+  background-color: initial;
 }
 
 #ramoLogo {
