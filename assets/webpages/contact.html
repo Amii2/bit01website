@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chocoramo - Contacto</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link rel="stylesheet" href="../stylesheets/contact.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <h1 class="navLogo">Chocoramo</h1>
+
+        <label for="menu">
+          <span class="material-symbols-outlined"> menu </span>
+        </label>
+        <input type="checkbox" id="menu" />
+
+        <nav class="navItems">
+          <a href="../../index.html">Inicio</a>
+          <a href="">Acerca</a>
+          <a href="">Productos</a>
+          <a href="">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <form id="formulario">
+        <fieldset>
+          <legend>Datos basicos</legend>
+
+          <div>
+            <label for="nombre">Nombre</label>
+            <p>Ingresa aqui tu Nombre completo:</p>
+            <input type="text" id="nombre" name="nombre" />
+          </div>
+
+          <div>
+            <label for="apellidos">Apellidos</label>
+            <p>Ingresa aqui tus Apellidos:</p>
+            <input type="text" id="apellidos" />
+          </div>
+
+          <div>
+            <label for="fechaNacimiento">Fecha de nacimiento</label>
+            <p>Ingresa aqui tus fecha de nacimiento:</p>
+            <input type="date" id="fechaNacimiento" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Datos de contancto</legend>
+
+          <div>
+            <label for="correo">Correo electronico</label>
+            <p>Ingresa aqui tu direccion de Correo&nbspElectronico:</p>
+            <input type="email" id="correo" />
+          </div>
+
+          <div>
+            <label for="tel">Telefono</label>
+            <p>Ingresa aqui tu numero de Telefono o Celular:</p>
+            <input type="tel" id="tel" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mensaje</legend>
+          <div>
+            <label for="categoria">Categoria</label>
+            <p>Ingresa aqui la Categoria de tu mensaje:</p>
+            <select id="categoria">
+              <option>Compra</option>
+              <option>Felicitacion</option>
+              <option>Sugerencia</option>
+              <option>Solicitud</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div>
+            <label for="mensaje">Mensaje</label>
+            <p>Ingresa tu mensaje aqui:</p>
+            <textarea cols="30" rows="10"></textarea>
+          </div>
+        </fieldset>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </main>
+    <script src="../scripts/formulario.js"></script>
+  </body>
+</html>
