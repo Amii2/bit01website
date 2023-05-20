@@ -21,6 +21,10 @@ main {
   gap: 10px;
 }
 
+header {
+  background-color: #d3cfc9;
+}
+
 a.btn-light,
 a.btn-blue {
   display: flex;

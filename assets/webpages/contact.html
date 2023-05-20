@@ -39,7 +39,7 @@
           <div>
             <label for="nombre">Nombre</label>
             <p>Ingresa aqui tu Nombre completo:</p>
-            <input type="text" id="nombre" name="nombre" />
+            <input type="text" id="nombre" />
           </div>
 
           <div>
@@ -61,7 +61,7 @@
           <div>
             <label for="correo">Correo electronico</label>
             <p>Ingresa aqui tu direccion de Correo&nbspElectronico:</p>
-            <input type="email" id="correo" />
+            <input type="text" id="correo" />
           </div>
 
           <div>
@@ -77,21 +77,30 @@
             <label for="categoria">Categoria</label>
             <p>Ingresa aqui la Categoria de tu mensaje:</p>
             <select id="categoria">
+              <option disabled selected value>
+                -- Selecciona una opcion --
+              </option>
               <option>Compra</option>
               <option>Felicitacion</option>
               <option>Sugerencia</option>
               <option>Solicitud</option>
-              <option>Otro</option>
+              <option>Otros</option>
             </select>
           </div>
           <div>
             <label for="mensaje">Mensaje</label>
             <p>Ingresa tu mensaje aqui:</p>
-            <textarea cols="30" rows="10"></textarea>
+            <textarea cols="30" rows="10" id="mensaje"></textarea>
           </div>
         </fieldset>
-        <button type="submit">Enviar mensaje</button>
+        <button type="submit" id="submitBtn">Enviar mensaje</button>
       </form>
+
+      <div class="thanksHidden">
+        <h1></h1>
+        <a class="btn-blue">Ir a Inicio</button>
+        <a class="btn-blue">Enviar otro mensaje</button>
+      </div>
     </main>
     <script src="../scripts/formulario.js"></script>
   </body>
