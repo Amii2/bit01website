@@ -57,7 +57,7 @@ $formulario.addEventListener("submit", (e) => {
         !alreadyScrolled
       );
       if (!alreadyScrolled) alreadyScrolled = true;
-    }
+    } else formData[key] = $formulario[key].value;
   }
 
   if (document.getElementsByClassName("errField").length === 0) {
@@ -67,7 +67,7 @@ $formulario.addEventListener("submit", (e) => {
     const thanksTitle = thanksElement.getElementsByTagName("h2")[0];
     thanksTitle.textContent = thanksTitle.textContent.replace(
       "Nombre",
-      $formulario.nombre.value.split(" ")[0]
+      formData.nombre.split(" ")[0]
     );
 
     $formulario.reset();
@@ -78,6 +78,11 @@ document
   .getElementsByClassName("btn-light")[0]
   .addEventListener("click", (e) => {
     e.target.parentElement.parentElement.className = "thanksHidden";
+    setTimeout(() => {
+      document
+        .getElementById("thanksMsg")
+        .getElementsByTagName("h2")[0].textContent = "¡Gracias Nombre!";
+    }, 300);
   });
 
 function getAge(bDate) {
