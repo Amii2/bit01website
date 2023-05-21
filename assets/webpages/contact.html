@@ -88,18 +88,20 @@
             </select>
           </div>
           <div>
-            <label for="mensaje">Mensaje</label>
-            <p>Ingresa tu mensaje aqui:</p>
+            <label for="mensaje">Ingresa tu mensaje aqui:</label>
             <textarea cols="30" rows="10" id="mensaje"></textarea>
           </div>
         </fieldset>
         <button type="submit" id="submitBtn">Enviar mensaje</button>
       </form>
 
-      <div class="thanksHidden">
-        <h1></h1>
-        <a class="btn-blue">Ir a Inicio</button>
-        <a class="btn-blue">Enviar otro mensaje</button>
+      <div class="thanksHidden" id="thanksMsg">
+        <h2>¡Gracias Nombre!</h2>
+        <h3>Pronto nos pondremos en contacto&nbspcontigo.</h3>
+        <div>
+          <a class="btn-blue" href="../../index.html">Regresar a Inicio</a>
+          <a class="btn-light">Nuevo mensaje</a>
+        </div>
       </div>
     </main>
     <script src="../scripts/formulario.js"></script>

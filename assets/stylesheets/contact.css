@@ -3,7 +3,9 @@ body {
   background-color: #d3cfc9;
 }
 
-form * {
+form *,
+h2,
+h3 {
   margin: 0px;
 }
 
@@ -13,4 +15,44 @@ form * {
 
 .errField {
   border-color: red;
+}
+
+#thanksMsg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  position: fixed;
+  width: 90vw;
+  height: 75vh;
+  top: 12.5%;
+  left: 5%;
+
+  text-align: center;
+  border-radius: 12px;
+
+  color: #f6f5f4;
+  background-color: #5f483f;
+}
+
+#thanksMsg > div {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+.thanksHidden {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  transition: 0.25s ease-out;
+}
+
+.thanksVisible {
+  display: initial;
+  pointer-events: initial;
+  opacity: 1;
+  transition: opacity 0.25s ease-out;
 }

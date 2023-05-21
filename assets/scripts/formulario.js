@@ -13,6 +13,7 @@ const formData = {
 };
 
 for (const key in formData) {
+  if (key === "fechaNacimiento") continue;
   $formulario[key].addEventListener("input", (e) => {
     removeErrorMessage(e.target);
     if (e.target.id === "tel") {
@@ -22,6 +23,7 @@ for (const key in formData) {
 }
 
 $formulario.fechaNacimiento.addEventListener("change", (e) => {
+  removeErrorMessage(e.target);
   if (getAge(e.target.value) < 18)
     addErrorMessage(
       e.target,
@@ -31,7 +33,13 @@ $formulario.fechaNacimiento.addEventListener("change", (e) => {
 });
 
 $formulario.correo.addEventListener("change", (e) => {
-  if (!(e.target.value.includes("@") && e.target.value.includes(".com")))
+  if (
+    !(
+      e.target.value.includes("@") &&
+      e.target.value.includes(".") &&
+      e.target.value.length >= 5
+    )
+  )
     addErrorMessage(e.target, "Direccion de correo no valida", true);
 });
 
@@ -52,9 +60,25 @@ $formulario.addEventListener("submit", (e) => {
     }
   }
 
-  if (document.getElementsByClassName("errField").length === 0)
-    document.getElementById("thanksMsg").className = "thanksVisible";
+  if (document.getElementsByClassName("errField").length === 0) {
+    const thanksElement = document.getElementById("thanksMsg");
+    thanksElement.className = "thanksVisible";
+
+    const thanksTitle = thanksElement.getElementsByTagName("h2")[0];
+    thanksTitle.textContent = thanksTitle.textContent.replace(
+      "Nombre",
+      $formulario.nombre.value.split(" ")[0]
+    );
+
+    $formulario.reset();
+  }
 });
+
+document
+  .getElementsByClassName("btn-light")[0]
+  .addEventListener("click", (e) => {
+    e.target.parentElement.parentElement.className = "thanksHidden";
+  });
 
 function getAge(bDate) {
   return new Date().getFullYear() - new Date(bDate).getFullYear();
