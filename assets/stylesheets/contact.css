@@ -4,6 +4,22 @@ body {
   height: fit-content;
 }
 
+main {
+  align-items: center;
+}
+
+#page-info {
+  margin: 8px 16%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#page-info > p {
+  margin: 6px 0px;
+  text-align: left;
+}
+
 form *,
 h2,
 h3 {
@@ -30,7 +46,9 @@ form {
   margin-bottom: 18px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
+  width: 100%;
 }
 
 fieldset {
@@ -38,14 +56,16 @@ fieldset {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  width: 94%;
 }
 
 fieldset > div {
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 3px;
 
-  width: 50%;
+  width: 56%;
   min-width: 250px;
 }
 
@@ -98,6 +118,7 @@ button {
   height: 75vh;
   top: 12.5%;
   left: 5%;
+  padding: 0px 16%;
 
   text-align: center;
   border-radius: 12px;
@@ -112,6 +133,10 @@ button {
   gap: 12px;
 }
 
+#thanksMsg > h2 {
+  font-size: 38px;
+}
+
 .thanksHidden {
   opacity: 0;
   display: none;
@@ -124,4 +149,26 @@ button {
   pointer-events: initial;
   opacity: 1;
   transition: opacity 0.25s ease-out;
+}
+
+@media screen and (orientation: portrait) {
+  #page-info {
+    width: 86%;
+  }
+
+  #thanksMsg > h2 {
+    font-size: 30px;
+  }
+
+  #thanksMsg {
+    padding: 0px 6%;
+  }
+
+  input + span {
+    left: 68% !important;
+  }
+
+  textarea + span {
+    left: 82% !important;
+  }
 }
