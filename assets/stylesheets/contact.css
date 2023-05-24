@@ -163,12 +163,4 @@ button {
   #thanksMsg {
     padding: 0px 6%;
   }
-
-  input + span {
-    left: 68% !important;
-  }
-
-  textarea + span {
-    left: 82% !important;
-  }
 }

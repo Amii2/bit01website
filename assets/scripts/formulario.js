@@ -126,10 +126,12 @@ function addClearButton(key, target) {
 
   if (key === "mensaje") {
     clearButton.innerHTML = "clear";
-    clearButton.style.setProperty("left", "88%");
+    const absPos = target.offsetWidth - 37 - 12;
+    clearButton.style.setProperty("left", `${absPos}px`);
   } else {
     clearButton.innerHTML = "x";
-    clearButton.style.setProperty("left", "71%");
+    const absPos = target.offsetWidth - 9 - 12;
+    clearButton.style.setProperty("left", `${absPos}px`);
   }
 
   target.after(clearButton);
