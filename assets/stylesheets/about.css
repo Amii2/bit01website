@@ -1,5 +1,6 @@
 body {
   background-color: #d3cfc9;
+  height: 100%;
 }
 
 main {
@@ -8,6 +9,7 @@ main {
   align-items: center;
   gap: 10px;
   background-color: initial;
+  margin-bottom: 24px;
 }
 
 #ramoLogo {
