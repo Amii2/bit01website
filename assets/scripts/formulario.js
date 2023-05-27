@@ -104,7 +104,7 @@ $formulario.addEventListener("submit", (e) => {
     );
 
     $formulario.reset();
-    console.log("Formulario enviado satisfactoriamente:\n" + formData.toString());
+    console.log("Formulario enviado satisfactoriamente:\n" + JSON.stringify(formData));
   }
 });
 
